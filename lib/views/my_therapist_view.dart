@@ -13,8 +13,9 @@ class _MyTherapistViewState extends State<MyTherapistView> {
     return Scaffold(
       body: ListView(
         children: const [
+          SizedBox(height: 14),
           Padding(
-            padding: EdgeInsets.only(left: 16, right: 8, top: 14, bottom: 6),
+            padding: EdgeInsets.only(left: 16, right: 8),
             child: Text("我與諮商師", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),), 
           ),
         ],

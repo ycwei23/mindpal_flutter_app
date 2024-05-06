@@ -10,6 +10,6 @@ class ConsultLogSearchTextField extends StatefulWidget {
 class _ConsultLogSearchTextFieldState extends State<ConsultLogSearchTextField> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Card();
   }
 }

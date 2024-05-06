@@ -10,6 +10,6 @@ class AudioConsultView extends StatefulWidget {
 class _AudioConsultViewState extends State<AudioConsultView> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold();
   }
 }

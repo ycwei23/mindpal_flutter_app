@@ -23,7 +23,7 @@ class _BaseViewState extends State<BaseView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("MinaPal", style: UIStyle.appBarTextStyle,),),
+      appBar: AppBar(title: Text("MinaPal", style: MyTextStyles.appBarTextStyle,),),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         selectedItemColor: UIColors.lightGreen,

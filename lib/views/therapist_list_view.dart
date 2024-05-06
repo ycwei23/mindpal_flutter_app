@@ -10,6 +10,6 @@ class TherapistListView extends StatefulWidget {
 class _TherapistListViewState extends State<TherapistListView> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold();
   }
 }

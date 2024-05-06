@@ -12,26 +12,22 @@ class MoodStatusCard extends StatefulWidget {
 class _MoodStatusCardState extends State<MoodStatusCard> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 12, right: 12, top: 6, bottom: 6),
-      child: Card(
-        color: UIColors.apricot1,
-        child: Padding(
-          padding: const EdgeInsets.only(left: 12, right: 12, top: 12, bottom: 12),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text("心理狀態光譜", style: UIStyle.cardTitleTextStyle,),
-                  TextButton(onPressed: () => {}, child: Text("查看更多", style: UIStyle.cardTextButtonTextStyle,))
-                ],
-              ),
-              const ProgressIndicatorWidget(progress: 0.5)
-
-            ],
-          ),
+    return Card(
+      color: UIColors.apricot1,
+      child: Padding(
+        padding: const EdgeInsets.only(left: 12, right: 12, top: 12, bottom: 12),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("心理狀態光譜", style: MyTextStyles.cardTitleTextStyle,),
+                TextButton(onPressed: () => {}, child: Text("查看更多", style: MyTextStyles.cardTextButtonTextStyle,))
+              ],
+            ),
+            const ProgressIndicatorWidget(progress: 0.5)
+          ],
         ),
       ),
     );

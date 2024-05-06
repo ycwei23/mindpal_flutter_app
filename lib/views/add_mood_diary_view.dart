@@ -10,6 +10,6 @@ class AddMoodDiaryView extends StatefulWidget {
 class _AddMoodDiaryViewState extends State<AddMoodDiaryView> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold();
   }
 }

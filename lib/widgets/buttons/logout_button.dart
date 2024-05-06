@@ -8,7 +8,7 @@ class LogoutButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-        style: UIStyle.logoutButtonStyle,
+        style: MyButtonStyles.logoutButtonStyle,
         onPressed: () {
           _logout(context);
         },

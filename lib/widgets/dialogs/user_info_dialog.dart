@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mindpal_flutter_app/constants/ui_colors.dart';
 import 'package:mindpal_flutter_app/constants/ui_style.dart';
+import 'package:mindpal_flutter_app/widgets/head_image_widgets.dart';
 
 class UserInfoDialog extends StatefulWidget {
   const UserInfoDialog({super.key});
@@ -32,14 +33,14 @@ class _UserInfoDialogState extends State<UserInfoDialog> {
       actions: <Widget>[
         ElevatedButton(
           onPressed: () => {Navigator.pop(context)},
-          style: UIStyle.dialogCencelButtonStyle,
+          style: MyButtonStyles.dialogCencelButtonStyle,
           child: const Center(
             child: Text("取消"),
           ),
         ),
         ElevatedButton(
           onPressed: () => {Navigator.pop(context)},
-          style: UIStyle.dialogUpdateButtonStyle,
+          style: MyButtonStyles.dialogUpdateButtonStyle,
           child: const Center(
             child: Text("更新"),
           ),
@@ -63,36 +64,9 @@ class _DialogTitleState extends State<DialogTitle> {
       children: [
         Padding(
           padding: const EdgeInsets.only(left: 12, right: 8),
-          child: Container( 
-            height: 55,
-            width: 55,
-            decoration: BoxDecoration(                  
-              color: UIColors.grey2,
-              shape: BoxShape.circle                  
-            ),
-            child: const Center(
-              child: Column(
-                children: [
-                  RotatedBox(
-                    quarterTurns: 1,
-                    child: Padding(
-                      padding: EdgeInsets.only(left: 14, top: 10),
-                      child: Text(":", style: TextStyle(fontSize: 18, fontWeight: FontWeight.normal)),
-                    )
-                  ),
-                  RotatedBox(
-                    quarterTurns: 1,
-                    child: Padding(
-                      padding: EdgeInsets.only(top: 14),
-                      child: Text("D", style: TextStyle(fontSize: 18, fontWeight: FontWeight.normal)),
-                    )
-                  ),                          
-                ],
-              )
-            ),
-          ),
+          child: HeadImageContainer()
         ),
-        Text("User ID: 000001", style: UIStyle.userNameTextStyle,),
+        Text("User ID: 000001", style: MyTextStyles.userNameTextStyle,),
       ],
     );
   }

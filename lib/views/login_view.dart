@@ -29,30 +29,34 @@ class _LoginViewState extends State<LoginView> {
         appBar: AppBar(
           title: Text(
             "登入",
-            style: UIStyle.appBarTextStyle,
+            style: MyTextStyles.appBarTextStyle,
           ),
         ),
         body: Center(
           child: ListView(
             children: [
+              const SizedBox(height: 180),
               Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20, top: 180, bottom: 10),
+                padding: const EdgeInsets.only(left: 20, right: 20),
                 child: EmailTextField(controller: _emailController,)
               ),
+              const SizedBox(height: 20),
               Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
+                padding: const EdgeInsets.only(left: 20, right: 20),
                 child: PasswordTextField(controller: _passwordController,)
               ),
+              const SizedBox(height: 40),
               Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20, top: 32, bottom: 12),
+                padding: const EdgeInsets.only(left: 20, right: 20),
                 child: LoginButton(
                   onPressed: () {
                     _login(_emailController.text, _passwordController.text);
                   },
                 ),
-              ),   
+              ),
+              const SizedBox(height: 12),   
               const Padding(
-                padding: EdgeInsets.only(left: 110, right: 110, top: 0, bottom: 12),
+                padding: EdgeInsets.only(left: 110, right: 110),
                 child: ForgetPasswordButton()                
               ),                             
             ],

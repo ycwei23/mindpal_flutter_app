@@ -10,6 +10,6 @@ class ConsultLogDetailView extends StatefulWidget {
 class _ConsultLogDetailViewState extends State<ConsultLogDetailView> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold();
   }
 }

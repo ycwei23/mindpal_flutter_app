@@ -12,7 +12,7 @@ class _SettingViewState extends State<SystemSettingsView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("設定", style: UIStyle.appBarTextStyle,),),
+      appBar: AppBar(title: Text("設定", style: MyTextStyles.appBarTextStyle),),
     );
   }
 }

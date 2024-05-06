@@ -16,13 +16,26 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       body: ListView(
         children: const [
+          SizedBox(height: 14),
           Padding(
-            padding: EdgeInsets.only(left: 16, right: 16, top: 14, bottom: 6),
+            padding: EdgeInsets.only(left: 16, right: 16),
             child: Text("早安, 郝美麗", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),), 
           ),
-          MoodStatusCard(),
-          LatestSummaryCard(),
-          MoodElfCard()
+          SizedBox(height: 12),
+          Padding(
+            padding: EdgeInsets.only(left: 12, right: 12),
+            child: MoodStatusCard()
+          ),
+          SizedBox(height: 12),
+          Padding(
+            padding: EdgeInsets.only(left: 12, right: 12),
+            child: LatestSummaryCard()
+          ),
+          SizedBox(height: 12),
+          Padding(
+            padding: EdgeInsets.only(left: 12, right: 12),
+            child: MoodElfCard()
+          )
         ]
       )
     );

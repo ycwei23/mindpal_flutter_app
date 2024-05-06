@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:mindpal_flutter_app/constants/routes.dart';
 import 'package:mindpal_flutter_app/constants/ui_style.dart';
 
-class LoginViewButton extends StatelessWidget {
-  const LoginViewButton({super.key});
+class NavToLoginViewButton extends StatelessWidget {
+  const NavToLoginViewButton({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-        style: UIStyle.bigButtonStyle,
+        style: MyButtonStyles.firstViewButtonStyle,
         onPressed: () => _navigate(context), child: const Text("登入"));
   }
 

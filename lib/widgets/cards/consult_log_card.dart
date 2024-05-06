@@ -10,6 +10,6 @@ class ConsultLogCard extends StatefulWidget {
 class _ConsultLogCardState extends State<ConsultLogCard> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Card();
   }
 }

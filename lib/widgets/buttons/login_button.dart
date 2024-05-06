@@ -8,7 +8,7 @@ class LoginButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-        style: UIStyle.bigButtonStyle,
+        style: MyButtonStyles.firstViewButtonStyle,
         onPressed: onPressed,
         child: const Text("登入")
     );

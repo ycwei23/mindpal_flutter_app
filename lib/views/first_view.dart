@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mindpal_flutter_app/constants/ui_colors.dart';
-import 'package:mindpal_flutter_app/widgets/buttons/login_view_button.dart';
-import 'package:mindpal_flutter_app/widgets/buttons/signup_view_button.dart';
+import 'package:mindpal_flutter_app/widgets/buttons/nav_to_login_view_button.dart';
+import 'package:mindpal_flutter_app/widgets/buttons/nav_to_signup_view_button.dart';
 
 class FirstView extends StatefulWidget {
   const FirstView({super.key});
@@ -16,28 +16,40 @@ class _FirstViewState extends State<FirstView> {
     return Scaffold(
       body: Center(
         child: ListView(
-          children: [
+          children: const [
+            SizedBox(height: 120),
             Padding(
-              padding: const EdgeInsets.only(left: 12, right: 12, top: 120, bottom: 12),
-              child: Container(
-                width: 185,
-                height: 185,
-                decoration: BoxDecoration(
-                  color: UIColors.apricot1,
-                  shape: BoxShape.circle
-                ),
-              ),
+              padding: EdgeInsets.only(left: 12, right: 12),
+              child: GrayCircleContainer()
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 20, right: 20, top: 16, bottom: 8),
-              child: LoginViewButton()
+            SizedBox(height: 30),
+            Padding(
+              padding: EdgeInsets.only(left: 20, right: 20),
+              child: NavToLoginViewButton()
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 20, right: 20, top: 8, bottom: 12),
-              child: SignupViewButton()
+            SizedBox(height: 16),
+            Padding(
+              padding: EdgeInsets.only(left: 20, right: 20),
+              child: NavToSignupViewButton()
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class GrayCircleContainer extends StatelessWidget {
+  const GrayCircleContainer({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 185,
+      height: 185,
+      decoration: BoxDecoration(
+        color: UIColors.apricot1,
+        shape: BoxShape.circle
       ),
     );
   }

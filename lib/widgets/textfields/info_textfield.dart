@@ -11,14 +11,14 @@ class NameTextField extends StatelessWidget {
     return TextField(
       controller: controller,
       decoration: InputDecoration(
-        hintStyle: UIStyle.hintTextStyle,
+        hintStyle: MyTextStyles.hintTextStyle,
         hintText: "用戶名",
+        filled: true,
+        fillColor: UIColors.grey1,
         border: OutlineInputBorder(
           borderSide: const BorderSide(color: Color(0xFFE8E8E8), width: 4),
           borderRadius: BorderRadius.circular(8)
         ),
-        filled: true,
-        fillColor: UIColors.grey1
       ),
       keyboardType: TextInputType.name,
     );
@@ -34,14 +34,14 @@ class EmailTextField extends StatelessWidget {
     return TextField(
       controller: controller,
       decoration: InputDecoration(
-        hintStyle: UIStyle.hintTextStyle,
+        hintStyle: MyTextStyles.hintTextStyle,
         hintText: "電子信箱",
+        filled: true,
+        fillColor: UIColors.grey1,
         border: OutlineInputBorder(
           borderSide: const BorderSide(color: Color(0xFFE8E8E8), width: 4),
           borderRadius: BorderRadius.circular(8)
-        ),
-        filled: true,
-        fillColor: UIColors.grey1
+        ),        
       ),
       keyboardType: TextInputType.emailAddress,
     );
@@ -64,31 +64,71 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
     return TextField(
       controller: widget.controller,
       obscureText: passwordVisible, 
+      keyboardType: TextInputType.visiblePassword, 
+      textInputAction: TextInputAction.done,
       decoration: InputDecoration( 
+        hintText: "密碼",
+        hintStyle: MyTextStyles.hintTextStyle,
         border: OutlineInputBorder(
           borderSide: const BorderSide(color: Color(0xFFE8E8E8), width: 4),
           borderRadius: BorderRadius.circular(8)
-        ),
-        hintText: "密碼",
-        hintStyle: UIStyle.hintTextStyle,
+        ),        
         suffixIcon: IconButton( 
           icon: Icon(passwordVisible 
               ? Icons.visibility_off 
               : Icons.visibility), 
-          onPressed: () { 
-            setState( 
-              () { 
-                passwordVisible = !passwordVisible; 
-              }, 
-            ); 
-          }, 
+          onPressed: () {setState(() { passwordVisible = !passwordVisible; });}, 
         ), 
         alignLabelWithHint: false, 
         filled: true,
         fillColor: UIColors.grey1
       ), 
-      keyboardType: TextInputType.visiblePassword, 
-      textInputAction: TextInputAction.done,
+    );
+  }
+}
+
+class EmergencyContactNameTextField extends StatelessWidget {
+  final TextEditingController controller;
+  const EmergencyContactNameTextField({super.key, required this.controller});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      controller: controller,
+      keyboardType: TextInputType.name,
+      decoration: InputDecoration(
+        hintStyle: MyTextStyles.hintTextStyle,
+        hintText: "緊急聯絡人",
+        border: OutlineInputBorder(
+          borderSide: const BorderSide(color: Color(0xFFE8E8E8), width: 4),
+          borderRadius: BorderRadius.circular(8)
+        ),
+        filled: true,
+        fillColor: UIColors.grey1
+      ),      
+    );
+  }
+}
+
+class EmergencyContactPhoneTextField extends StatelessWidget {
+  final TextEditingController controller;
+  const EmergencyContactPhoneTextField({super.key, required this.controller});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      controller: controller,
+      keyboardType: TextInputType.phone,
+      decoration: InputDecoration(
+        hintStyle: MyTextStyles.hintTextStyle,
+        hintText: "緊急聯絡人電話",
+        border: OutlineInputBorder(
+          borderSide: const BorderSide(color: Color(0xFFE8E8E8), width: 4),
+          borderRadius: BorderRadius.circular(8)
+        ),
+        filled: true,
+        fillColor: UIColors.grey1
+      ),      
     );
   }
 }

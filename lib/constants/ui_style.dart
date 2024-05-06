@@ -1,12 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:mindpal_flutter_app/constants/ui_colors.dart';
 
-class UIStyle {
-  static ButtonStyle bigButtonStyle = ElevatedButton.styleFrom(
+class MyButtonStyles {
+  static ButtonStyle firstViewButtonStyle = ElevatedButton.styleFrom(
     backgroundColor: UIColors.lightGreen,
     foregroundColor: UIColors.white,
     splashFactory: NoSplash.splashFactory, // 完全取消水波紋效果
     fixedSize: const Size(343, 60),
+    textStyle: const TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.bold
+    )
+  );
+
+  static ButtonStyle forgetPasswordButtonStyle = ElevatedButton.styleFrom(
+    foregroundColor: UIColors.lightGreen,
+    splashFactory: NoSplash.splashFactory, // 完全取消水波紋效果
+    fixedSize: const Size(40, 60),
+    elevation: 0,
+    textStyle: const TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.bold
+    )
+  );
+
+  static ButtonStyle MoodDiaryButtonStyle = ElevatedButton.styleFrom(
+    backgroundColor: UIColors.lightGreen,
+    foregroundColor: UIColors.white,
+    splashFactory: NoSplash.splashFactory, // 完全取消水波紋效果
+    fixedSize: const Size(125, 50),
+    elevation: 0,
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
     textStyle: const TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.bold
@@ -19,11 +43,11 @@ class UIStyle {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       splashFactory: NoSplash.splashFactory, // 完全取消水波紋效果
       fixedSize: const Size(70, 40),
+      elevation: 0,
       textStyle: const TextStyle(
         fontSize: 10,
         fontWeight: FontWeight.bold
       ),
-      elevation: 0,
   );
 
   static ButtonStyle dialogUpdateButtonStyle = ElevatedButton.styleFrom(
@@ -32,11 +56,11 @@ class UIStyle {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       splashFactory: NoSplash.splashFactory, // 完全取消水波紋效果
       fixedSize: const Size(70, 40),
+      elevation: 0,
       textStyle: const TextStyle(
         fontSize: 10,
         fontWeight: FontWeight.bold
       ),
-      elevation: 0,
   );
 
   static ButtonStyle logoutButtonStyle = ElevatedButton.styleFrom(
@@ -44,11 +68,11 @@ class UIStyle {
       foregroundColor: UIColors.white,
       splashFactory: NoSplash.splashFactory, // 完全取消水波紋效果
       fixedSize: const Size(343, 51),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       textStyle: const TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.bold
-      ),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))
+      ),      
   );
 
   static ButtonStyle profileButtonStyle = ElevatedButton.styleFrom(
@@ -56,13 +80,15 @@ class UIStyle {
       foregroundColor: UIColors.darkGreen,
       splashFactory: NoSplash.splashFactory, // 完全取消水波紋效果
       fixedSize: const Size(343, 51),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       textStyle: const TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.bold
-      ),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      ),      
   );
+}
 
+class MyTextStyles {
   static TextStyle hintTextStyle = const TextStyle(
     color: Color(0XFFBDBDBD),
     height: 1
@@ -100,3 +126,4 @@ class UIStyle {
     fontWeight: FontWeight.bold
   ); 
 }
+

@@ -12,7 +12,7 @@ class _ForgetPasswordViewState extends State<ForgetPasswordView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("忘記密碼", style: UIStyle.appBarTextStyle,),),
+      appBar: AppBar(title: Text("忘記密碼", style: MyTextStyles.appBarTextStyle,),),
     );
   }
 }

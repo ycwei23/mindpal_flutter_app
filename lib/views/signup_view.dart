@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mindpal_flutter_app/constants/ui_style.dart';
-import 'package:mindpal_flutter_app/widgets/buttons/forget_password_button.dart';
 import 'package:mindpal_flutter_app/widgets/buttons/signup_button.dart';
 import 'package:mindpal_flutter_app/widgets/textfields/info_textfield.dart';
 
@@ -15,6 +14,8 @@ class _SignupViewState extends State<SignupView> {
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _emergencyContactNameController = TextEditingController();
+  final TextEditingController _emergencyContactPhoneController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -27,38 +28,45 @@ class _SignupViewState extends State<SignupView> {
       },
       child: Scaffold(
         appBar: AppBar(
-          title: Text(
-            "註冊",
-            style: UIStyle.appBarTextStyle
-          ),
+          title: Text("註冊", style: MyTextStyles.appBarTextStyle),
         ),
         body: Center(
           child: ListView(
             children: [
+              const SizedBox(height: 120),
               Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20, top: 120, bottom: 10),
+                padding: const EdgeInsets.only(left: 20, right: 20),
                 child: NameTextField(controller: _nameController,)
               ),
+              const SizedBox(height: 20),
               Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
+                padding: const EdgeInsets.only(left: 20, right: 20),
                 child: EmailTextField(controller: _emailController,)
               ),
+              const SizedBox(height: 20),
               Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
+                padding: const EdgeInsets.only(left: 20, right: 20),
                 child: PasswordTextField(controller: _passwordController,)
               ),
+              const SizedBox(height: 20),
               Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20, top: 32, bottom: 12),
+                padding: const EdgeInsets.only(left: 20, right: 20),
+                child: EmergencyContactNameTextField(controller: _emergencyContactNameController)
+              ),
+              const SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20),
+                child: EmergencyContactPhoneTextField(controller: _emergencyContactPhoneController)
+              ),
+              const SizedBox(height: 42),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20),
                 child: SignupButton(
                   onPressed: () {
-                    _signup(_nameController.text, _emailController.text, _passwordController.text);
+                    _signup(_nameController.text, _emailController.text, _passwordController.text, _emergencyContactNameController.text, _emergencyContactPhoneController.text);
                   },
                 ),
-              ),   
-              const Padding(
-                padding: EdgeInsets.only(left: 110, right: 110, top: 0, bottom: 12),
-                child: ForgetPasswordButton()                
-              ),                             
+              ),                         
             ],
           ),
         )
@@ -66,8 +74,8 @@ class _SignupViewState extends State<SignupView> {
     );
   }
 
-  Future<void> _signup(String name, String email, String password) async {
-    print('Signing up with Name: $name, Email: $email, Password: $password');
+  Future<void> _signup(String name, String email, String password, String emergencyContactName, String emergencyContactPhone) async {
+    print('Signing up with Name: $name, Email: $email, Password: $password, emergencyContactName: $emergencyContactName, EmergencyContactPhone: $emergencyContactPhone');
   }
   
 }
