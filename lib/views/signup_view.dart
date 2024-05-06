@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mindpal_flutter_app/constants/ui_style.dart';
+import 'package:mindpal_flutter_app/widgets/buttons/forget_password_button.dart';
 import 'package:mindpal_flutter_app/widgets/buttons/signup_button.dart';
 import 'package:mindpal_flutter_app/widgets/textfields/info_textfield.dart';
 
@@ -55,10 +56,8 @@ class _SignupViewState extends State<SignupView> {
                 ),
               ),   
               Padding(
-                padding: EdgeInsets.only(left: 20, right: 20, top: 12, bottom: 12),
-                child: Center(
-                  child: Text("忘記密碼?", style: TextStyle(color: Color(0xFF5DB075), fontWeight: FontWeight.bold, fontSize: 16),),
-                )
+                padding: EdgeInsets.only(left: 110, right: 110, top: 0, bottom: 12),
+                child: ForgetPasswordButton()                
               ),                             
             ],
           ),

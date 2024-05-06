@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mindpal_flutter_app/constants/ui_colors.dart';
 import 'package:mindpal_flutter_app/constants/ui_style.dart';
+import 'package:mindpal_flutter_app/widgets/dialogs/user_info_dialog.dart';
 
 class UserInfoCard extends StatefulWidget {
   const UserInfoCard({super.key});
@@ -15,7 +16,7 @@ class _UserInfoCardState extends State<UserInfoCard> {
     return Card(
       color: UIColors.apricot1,
       child: Padding(
-        padding: EdgeInsets.only(left: 12, right: 12, top: 16, bottom: 0),
+        padding: EdgeInsets.only(left: 6, right: 6, top: 16, bottom: 0),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -25,23 +26,23 @@ class _UserInfoCardState extends State<UserInfoCard> {
                 Padding(
                   padding: EdgeInsets.only(left: 12, right: 8),
                   child: Container( 
-                    height: 50,
-                    width: 50,
+                    height: 55,
+                    width: 55,
                     child: Center(
                       child: Column(
                         children: [
                           RotatedBox(
                             quarterTurns: 1,
                             child: Padding(
-                              padding: EdgeInsets.only(left: 12, top: 10),
-                              child: Text(":", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                              padding: EdgeInsets.only(left: 14, top: 10),
+                              child: Text(":", style: TextStyle(fontSize: 18, fontWeight: FontWeight.normal)),
                             )
                           ),
                           RotatedBox(
                             quarterTurns: 1,
                             child: Padding(
                               padding: EdgeInsets.only(top: 14),
-                              child: Text("D", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                              child: Text("D", style: TextStyle(fontSize: 18, fontWeight: FontWeight.normal)),
                             )
                           ),                          
                         ],
@@ -57,7 +58,7 @@ class _UserInfoCardState extends State<UserInfoCard> {
               ],
             ),
             Padding(
-              padding: EdgeInsets.only(left: 70),
+              padding: EdgeInsets.only(left: 75),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -72,7 +73,12 @@ class _UserInfoCardState extends State<UserInfoCard> {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                TextButton(onPressed: () => {}, child: Text("修改個人資訊", style: UIStyle.cardTextButtonTextStyle,))
+                TextButton(
+                  onPressed: () => {
+                    showDialog(context: context, builder: (context) => UserInfoDialog())
+                  }, 
+                  child: Text("修改個人資訊", style: UIStyle.cardTextButtonTextStyle,)
+                )
               ],
             ),
           ],

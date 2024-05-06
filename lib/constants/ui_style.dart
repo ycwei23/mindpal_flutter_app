@@ -5,6 +5,7 @@ class UIStyle {
   static ButtonStyle bigButtonStyle = ElevatedButton.styleFrom(
       backgroundColor: UIColors.lightGreen,
       foregroundColor: UIColors.white,
+      splashFactory: NoSplash.splashFactory, // 完全取消水波紋效果
       fixedSize: const Size(343, 60),
       textStyle: TextStyle(
         fontSize: 16,
@@ -12,15 +13,28 @@ class UIStyle {
       )
   );
 
-  static ButtonStyle profileButtonStyle = ElevatedButton.styleFrom(
+  static ButtonStyle logoutButtonStyle = ElevatedButton.styleFrom(
       backgroundColor: UIColors.lightGreen,
       foregroundColor: UIColors.white,
+      splashFactory: NoSplash.splashFactory, // 完全取消水波紋效果
       fixedSize: const Size(343, 51),
       textStyle: TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.bold
       ),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))
+  );
+
+  static ButtonStyle profileButtonStyle = ElevatedButton.styleFrom(
+      backgroundColor: UIColors.apricot1,
+      foregroundColor: UIColors.darkGreen,
+      splashFactory: NoSplash.splashFactory, // 完全取消水波紋效果
+      fixedSize: const Size(343, 51),
+      textStyle: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.bold
+      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
   );
 
   static TextStyle hintTextStyle = TextStyle(
@@ -51,7 +65,7 @@ class UIStyle {
 
   static TextStyle userInfoCardTextStyle = TextStyle(
     color: Colors.black,
-    fontSize: 12,
+    fontSize: 10,
     fontWeight: FontWeight.normal
   ); 
   static TextStyle userNameTextStyle = TextStyle(

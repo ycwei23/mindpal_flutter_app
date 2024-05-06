@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mindpal_flutter_app/widgets/buttons/logout_button.dart';
+import 'package:mindpal_flutter_app/widgets/buttons/profile_buttons.dart';
 import 'package:mindpal_flutter_app/widgets/cards/user_info_card.dart';
 
 class ProfileView extends StatefulWidget {
@@ -25,6 +26,31 @@ class _ProfileViewState extends State<ProfileView> {
               padding: EdgeInsets.only(left: 5, right: 5),
               child: UserInfoCard(),
             ),
+            SizedBox(height: 12,),
+            Padding(
+              padding: EdgeInsets.only(left: 8, right: 8),
+              child: NavToMyTherapistButton()
+            ),
+            SizedBox(height: 12,),
+            Padding(
+              padding: EdgeInsets.only(left: 8, right: 8),
+              child: NavToTherapistListButton()
+            ),                        
+            SizedBox(height: 12,),
+            Padding(
+              padding: EdgeInsets.only(left: 8, right: 8),
+              child: NavToMoodDiaryButton(),
+            ),
+            SizedBox(height: 12,),
+            Padding(
+              padding: EdgeInsets.only(left: 8, right: 8),
+              child: NavToConsultlogButton()
+            ),  
+            SizedBox(height: 12,),
+            Padding(
+              padding: EdgeInsets.only(left: 8, right: 8),
+              child: NavToSystemSettingsButton()
+            ),          
             SizedBox(height: 12,),
             Padding(
               padding: EdgeInsets.only(left: 8, right: 8),
