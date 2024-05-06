@@ -10,7 +10,7 @@ class NavToMoodDiaryButton extends StatelessWidget {
     return ElevatedButton(
         style: UIStyle.profileButtonStyle,
         onPressed: () => {print("NavToMoodDiaryButton on pressed.")},
-        child: Row(
+        child: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text("我的情緒日誌"),
@@ -29,7 +29,7 @@ class NavToMyTherapistButton extends StatelessWidget {
     return ElevatedButton(
         style: UIStyle.profileButtonStyle,
         onPressed: () => {print("NavToMyTherapistButton on pressed.")},
-        child: Row(
+        child: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text("我與諮商師"),
@@ -48,7 +48,7 @@ class NavToConsultlogButton extends StatelessWidget {
     return ElevatedButton(
         style: UIStyle.profileButtonStyle,
         onPressed: () => {print("NavToConsultlogButton on pressed.")},
-        child: Row(
+        child: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text("AI諮商紀錄"),
@@ -67,7 +67,7 @@ class NavToTherapistListButton extends StatelessWidget {
     return ElevatedButton(
         style: UIStyle.profileButtonStyle,
         onPressed: () => {print("NavToTherapistListButton on pressed.")},
-        child: Row(
+        child: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text("MinpPal諮商師總覽"),
@@ -89,7 +89,7 @@ class NavToSystemSettingsButton extends StatelessWidget {
           print("NavToSystemSettingsButton on pressed."),
           Navigator.pushNamed(context, Routes.systemSettings)
         },
-        child: Row(
+        child: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text("設定"),

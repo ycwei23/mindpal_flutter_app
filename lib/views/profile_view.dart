@@ -15,9 +15,9 @@ class _ProfileViewState extends State<ProfileView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(8.0), 
+        padding: const EdgeInsets.all(8.0), 
         child: ListView(
-          children: [
+          children: const [
             Padding(
               padding: EdgeInsets.only(left: 16, right: 8, top: 14, bottom: 6),
               child: Text("我的個人資訊", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),), 

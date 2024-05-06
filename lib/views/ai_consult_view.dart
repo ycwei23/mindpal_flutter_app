@@ -23,11 +23,11 @@ class _AIConsultViewState extends State<AIConsultView> {
           children: [
             Expanded(
               child: ListView(
-                children: [
+                children: const [
                 ],
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 16, right: 16),
               child: ChatTextField()
             )

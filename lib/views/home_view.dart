@@ -15,7 +15,7 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        children: [
+        children: const [
           Padding(
             padding: EdgeInsets.only(left: 16, right: 16, top: 14, bottom: 6),
             child: Text("早安, 郝美麗", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),), 

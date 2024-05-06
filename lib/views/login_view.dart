@@ -36,22 +36,22 @@ class _LoginViewState extends State<LoginView> {
           child: ListView(
             children: [
               Padding(
-                padding: EdgeInsets.only(left: 20, right: 20, top: 180, bottom: 10),
+                padding: const EdgeInsets.only(left: 20, right: 20, top: 180, bottom: 10),
                 child: EmailTextField(controller: _emailController,)
               ),
               Padding(
-                padding: EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
+                padding: const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
                 child: PasswordTextField(controller: _passwordController,)
               ),
               Padding(
-                padding: EdgeInsets.only(left: 20, right: 20, top: 32, bottom: 12),
+                padding: const EdgeInsets.only(left: 20, right: 20, top: 32, bottom: 12),
                 child: LoginButton(
                   onPressed: () {
                     _login(_emailController.text, _passwordController.text);
                   },
                 ),
               ),   
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(left: 110, right: 110, top: 0, bottom: 12),
                 child: ForgetPasswordButton()                
               ),                             

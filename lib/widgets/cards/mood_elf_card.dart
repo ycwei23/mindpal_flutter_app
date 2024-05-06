@@ -13,11 +13,11 @@ class _MoodElfCardState extends State<MoodElfCard> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 12, right: 12, top: 6, bottom: 6),
+      padding: const EdgeInsets.only(left: 12, right: 12, top: 6, bottom: 6),
       child: Card(
         color: UIColors.apricot1,
         child: Padding(
-          padding: EdgeInsets.only(left: 12, right: 12, top: 12, bottom: 32),
+          padding: const EdgeInsets.only(left: 12, right: 12, top: 12, bottom: 32),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -27,7 +27,7 @@ class _MoodElfCardState extends State<MoodElfCard> {
                   Text("情緒小精靈", style: UIStyle.cardTitleTextStyle,)
                 ],
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 30, bottom: 30),
                 child: Text("你遠比你想象中的還要強大。", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),), 
               )

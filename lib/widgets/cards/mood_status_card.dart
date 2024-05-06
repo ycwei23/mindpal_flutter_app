@@ -13,11 +13,11 @@ class _MoodStatusCardState extends State<MoodStatusCard> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 12, right: 12, top: 6, bottom: 6),
+      padding: const EdgeInsets.only(left: 12, right: 12, top: 6, bottom: 6),
       child: Card(
         color: UIColors.apricot1,
         child: Padding(
-          padding: EdgeInsets.only(left: 12, right: 12, top: 12, bottom: 12),
+          padding: const EdgeInsets.only(left: 12, right: 12, top: 12, bottom: 12),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -28,7 +28,7 @@ class _MoodStatusCardState extends State<MoodStatusCard> {
                   TextButton(onPressed: () => {}, child: Text("查看更多", style: UIStyle.cardTextButtonTextStyle,))
                 ],
               ),
-              ProgressIndicatorWidget(progress: 0.5)
+              const ProgressIndicatorWidget(progress: 0.5)
 
             ],
           ),
@@ -42,14 +42,14 @@ class ProgressIndicatorWidget extends StatelessWidget {
   final double progress; // 進度值，0.0 到 1.0
 
   const ProgressIndicatorWidget({
-    Key? key,
+    super.key,
     required this.progress,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -73,10 +73,10 @@ class ProgressIndicatorWidget extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 6,
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text('低落', style: TextStyle(color: Colors.black, fontSize: 14)),

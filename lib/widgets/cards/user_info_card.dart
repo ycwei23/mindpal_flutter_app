@@ -16,7 +16,7 @@ class _UserInfoCardState extends State<UserInfoCard> {
     return Card(
       color: UIColors.apricot1,
       child: Padding(
-        padding: EdgeInsets.only(left: 6, right: 6, top: 16, bottom: 0),
+        padding: const EdgeInsets.only(left: 6, right: 6, top: 16, bottom: 0),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -24,11 +24,15 @@ class _UserInfoCardState extends State<UserInfoCard> {
             Row(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(left: 12, right: 8),
+                  padding: const EdgeInsets.only(left: 12, right: 8),
                   child: Container( 
                     height: 55,
                     width: 55,
-                    child: Center(
+                    decoration: BoxDecoration(                  
+                      color: UIColors.grey2,
+                      shape: BoxShape.circle                  
+                    ),
+                    child: const Center(
                       child: Column(
                         children: [
                           RotatedBox(
@@ -47,18 +51,14 @@ class _UserInfoCardState extends State<UserInfoCard> {
                           ),                          
                         ],
                       )
-                    ),
-                    decoration: BoxDecoration(                  
-                      color: UIColors.grey2,
-                      shape: BoxShape.circle                  
-                    ),
+                    ),                    
                   ),
                 ),
                 Text("郝美麗", style: UIStyle.userNameTextStyle,),
               ],
             ),
             Padding(
-              padding: EdgeInsets.only(left: 75),
+              padding: const EdgeInsets.only(left: 75),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -75,7 +75,7 @@ class _UserInfoCardState extends State<UserInfoCard> {
               children: [
                 TextButton(
                   onPressed: () => {
-                    showDialog(context: context, builder: (context) => UserInfoDialog())
+                    showDialog(context: context, builder: (context) => const UserInfoDialog())
                   }, 
                   child: Text("修改個人資訊", style: UIStyle.cardTextButtonTextStyle,)
                 )

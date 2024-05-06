@@ -12,8 +12,8 @@ class _ChatTextFieldState extends State<ChatTextField> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 8),
-      margin: EdgeInsets.only(bottom: 14),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
+      margin: const EdgeInsets.only(bottom: 14),
       decoration: BoxDecoration(
         color: UIColors.grey1,
         borderRadius: BorderRadius.circular(30),
@@ -27,7 +27,7 @@ class _ChatTextFieldState extends State<ChatTextField> {
                 hintText: "Message here...",
                 hintStyle: TextStyle(color: UIColors.grey4),
                 border: InputBorder.none,
-                contentPadding: EdgeInsets.only(left: 14, bottom: 2)
+                contentPadding: const EdgeInsets.only(left: 14, bottom: 2)
               ),
             ),
           ),
@@ -39,14 +39,14 @@ class _ChatTextFieldState extends State<ChatTextField> {
               shape: BoxShape.circle// 設置背景顏色 // 如果需要圓角
             ),
             child: IconButton(
-              icon: Icon(Icons.mic),
+              icon: const Icon(Icons.mic),
               color: Colors.white,  // 設置圖標顏色
               onPressed: () {
                 // 執行的動作
               },
             ),
           ),
-          SizedBox(width: 10,),
+          const SizedBox(width: 10,),
           Container(
             width: 40,
             height: 40,
@@ -55,7 +55,7 @@ class _ChatTextFieldState extends State<ChatTextField> {
               shape: BoxShape.circle  // 如果需要圓角
             ),
             child: IconButton(
-              icon: Icon(Icons.arrow_upward),
+              icon: const Icon(Icons.arrow_upward),
               color: Colors.white,  // 設置圖標顏色
               onPressed: () {
                 // 執行的動作

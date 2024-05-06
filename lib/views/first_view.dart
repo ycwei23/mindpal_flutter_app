@@ -18,7 +18,7 @@ class _FirstViewState extends State<FirstView> {
         child: ListView(
           children: [
             Padding(
-              padding: EdgeInsets.only(left: 12, right: 12, top: 120, bottom: 12),
+              padding: const EdgeInsets.only(left: 12, right: 12, top: 120, bottom: 12),
               child: Container(
                 width: 185,
                 height: 185,
@@ -28,11 +28,11 @@ class _FirstViewState extends State<FirstView> {
                 ),
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 20, right: 20, top: 16, bottom: 8),
               child: LoginViewButton()
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 20, right: 20, top: 8, bottom: 12),
               child: SignupViewButton()
             ),

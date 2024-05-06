@@ -37,22 +37,22 @@ class Routes {
 
   static Map<String, WidgetBuilder> getRoutes() {
     return {
-      addMoodDiary: (context) => AddMoodDiaryView(),
-      aiConsult: (context) => AIConsultView(),
-      audioConsult:(context) => AudioConsultView(),
-      baseview:(context) => BaseView(),
-      consultLogDetail:(context) => ConsultLogDetailView(),
-      consultLog: (context) => ConsultLogView(),
-      first:(context) => FirstView(),
-      forgetPassword:(context) => ForgetPasswordView(),
-      home: (context) => HomeView(),
-      login: (context) => LoginView(),
-      moodDiary: (context) => MoodDiaryView(),
-      myTherapist:(context) => MyTherapistView(),
-      profile: (context) => ProfileView(),
-      signup: (context) => SignupView(),
-      systemSettings: (context) => SystemSettingsView(),
-      therapistList: (context) => TherapistListView(),
+      addMoodDiary: (context) => const AddMoodDiaryView(),
+      aiConsult: (context) => const AIConsultView(),
+      audioConsult:(context) => const AudioConsultView(),
+      baseview:(context) => const BaseView(),
+      consultLogDetail:(context) => const ConsultLogDetailView(),
+      consultLog: (context) => const ConsultLogView(),
+      first:(context) => const FirstView(),
+      forgetPassword:(context) => const ForgetPasswordView(),
+      home: (context) => const HomeView(),
+      login: (context) => const LoginView(),
+      moodDiary: (context) => const MoodDiaryView(),
+      myTherapist:(context) => const MyTherapistView(),
+      profile: (context) => const ProfileView(),
+      signup: (context) => const SignupView(),
+      systemSettings: (context) => const SystemSettingsView(),
+      therapistList: (context) => const TherapistListView(),
     };
   }
 }
