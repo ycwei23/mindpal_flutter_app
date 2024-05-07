@@ -26,7 +26,7 @@ class _UserInfoCardState extends State<UserInfoCard> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 12, right: 8),
-                  child: HeadImageContainer()
+                  child: ProfileHeadContainer()
                 ),
                 Text("郝美麗", style: MyTextStyles.userNameTextStyle,),
               ],

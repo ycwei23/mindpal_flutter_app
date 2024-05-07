@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mindpal_flutter_app/widgets/buttons/mood_diary_buttons.dart';
+import 'package:mindpal_flutter_app/widgets/cards/today_event_card.dart';
+import 'package:mindpal_flutter_app/widgets/cards/today_mood_card.dart';
+import 'package:mindpal_flutter_app/widgets/cards/today_mood_diary_card.dart';
 
 class MoodDiaryView extends StatefulWidget {
   const MoodDiaryView({super.key});
@@ -21,6 +24,20 @@ class _MoodDiaryViewState extends State<MoodDiaryView> {
           ),
           SizedBox(height: 12,),
           Padding(
+            padding: EdgeInsets.only(left: 18, right: 18),
+            child: TodayMoodCard(),
+          ),
+          SizedBox(height: 12,),
+          Padding(
+            padding: EdgeInsets.only(left: 18, right: 18),
+            child: TodayEventCard(),
+          ),          
+          SizedBox(height: 12,), 
+          Padding(
+            padding: EdgeInsets.only(left: 18, right: 18),
+            child: TodayMoodDiaryCard(),
+          ),          SizedBox(height: 12,),    
+          Padding(
             padding: EdgeInsets.only(left: 14, right: 14),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -30,7 +47,7 @@ class _MoodDiaryViewState extends State<MoodDiaryView> {
                 MoodDiaryFinishButton()
               ],
             ),
-          )
+          ),
         ],
       )
     );

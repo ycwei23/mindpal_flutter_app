@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mindpal_flutter_app/constants/routes.dart';
 import 'package:mindpal_flutter_app/constants/ui_colors.dart';
 import 'package:mindpal_flutter_app/constants/ui_style.dart';
 
@@ -24,7 +25,7 @@ class _LatestSummaryCardState extends State<LatestSummaryCard> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("前一次AI諮商摘要", style: MyTextStyles.cardTitleTextStyle,),
-                TextButton(onPressed: () => {}, child: Text("查看更多", style: MyTextStyles.cardTextButtonTextStyle,))
+                TextButton(onPressed: () => {Navigator.pushNamed(context, Routes.consultLog)}, child: Text("查看更多", style: MyTextStyles.cardTextButtonTextStyle,))
               ],
             ),
             const SizedBox(height: 8,),

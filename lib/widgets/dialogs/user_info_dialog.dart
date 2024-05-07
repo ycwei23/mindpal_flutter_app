@@ -64,7 +64,7 @@ class _DialogTitleState extends State<DialogTitle> {
       children: [
         Padding(
           padding: const EdgeInsets.only(left: 12, right: 8),
-          child: HeadImageContainer()
+          child: ProfileHeadContainer()
         ),
         Text("User ID: 000001", style: MyTextStyles.userNameTextStyle,),
       ],
