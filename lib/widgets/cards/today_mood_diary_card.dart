@@ -15,14 +15,14 @@ class _TodayMoodDiaryCardState extends State<TodayMoodDiaryCard> {
     return Card(
       color: UIColors.apricot1,
       child: Padding(
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         child: Column(
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [Text("寫下你今天的心情", style: MyTextStyles.cardTitleTextStyle,)],
             ),
-            SizedBox(height: 10),  // 加入一點間隔
+            const SizedBox(height: 10),  // 加入一點間隔
             TextField(
               maxLines: 5,  // 允許多行輸入
               decoration: InputDecoration(

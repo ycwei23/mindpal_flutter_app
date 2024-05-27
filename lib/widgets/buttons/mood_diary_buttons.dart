@@ -7,7 +7,7 @@ class MoodDiaryDeleteButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      style: MyButtonStyles.MoodDiaryButtonStyle,
+      style: MyButtonStyles.moodDiaryButtonStyle,
       onPressed: () => {},
       child: Text("刪除")
     );
@@ -20,7 +20,7 @@ class MoodDiaryEditButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      style: MyButtonStyles.MoodDiaryButtonStyle,
+      style: MyButtonStyles.moodDiaryButtonStyle,
       onPressed: () => {},
       child: Text("編輯")
     );
@@ -33,7 +33,7 @@ class MoodDiaryFinishButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      style: MyButtonStyles.MoodDiaryButtonStyle,
+      style: MyButtonStyles.moodDiaryButtonStyle,
       onPressed: () => {},
       child: Text("完成")
     );

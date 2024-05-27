@@ -21,12 +21,30 @@ class _UserInfoDialogState extends State<UserInfoDialog> {
         constraints: const BoxConstraints(
           maxWidth: 300,
           minWidth: 300,
-          minHeight: 200,
-          maxHeight: 200,
+          minHeight: 250,
+          maxHeight: 250,
         ),
         child: const Column(
           children: [
-            
+            Padding(
+              padding: EdgeInsets.only(left: 12, right: 12),
+              child: InfoTextField(infoName: "姓名"),
+            ),            
+            SizedBox(height: 8,),
+            Padding(
+              padding: EdgeInsets.only(left: 12, right: 12),
+              child: InfoTextField(infoName: "Email"),
+            ),                        
+            SizedBox(height: 8,),
+            Padding(
+              padding: EdgeInsets.only(left: 12, right: 12),
+              child: InfoPasswordTextField(),
+            ),                        
+            SizedBox(height: 8,),            
+            Padding(
+              padding: EdgeInsets.only(left: 12, right: 12),
+              child: InfoTextField(infoName: "電話"),
+            ),                        
           ],
         ),
       ),
@@ -46,6 +64,79 @@ class _UserInfoDialogState extends State<UserInfoDialog> {
           ),
         ),        
       ],
+    );
+  }
+}
+
+class InfoTextField extends StatelessWidget {
+  final String infoName;
+  const InfoTextField({super.key, required this.infoName});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 8),
+      decoration: BoxDecoration(
+        color: Colors.white, // 背景顏色
+        borderRadius: BorderRadius.circular(10), // 圓角
+      ),
+      child: Row(
+        children: [
+          Text(infoName, style: TextStyle(fontSize: 16, color: UIColors.grey4)), // 左側的Text widget
+          SizedBox(width: 10), // 間隔
+          Expanded( // 讓TextField佔據剩餘空間
+            child: TextField(
+              decoration: InputDecoration(
+                border: InputBorder.none, // 無邊框
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class InfoPasswordTextField extends StatefulWidget {
+  const InfoPasswordTextField({super.key});
+
+  @override
+  State<InfoPasswordTextField> createState() => _InfoPasswordTextFieldState();
+}
+
+class _InfoPasswordTextFieldState extends State<InfoPasswordTextField> {
+  bool passwordVisible = true;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 8),
+      decoration: BoxDecoration(
+        color: Colors.white, // 背景顏色
+        borderRadius: BorderRadius.circular(10), // 圓角
+      ),
+      child: Row(
+        children: [
+          Text("密碼", style: TextStyle(fontSize: 16, color: UIColors.grey4)), // 左側的Text widget
+          SizedBox(width: 10), // 間隔
+          Expanded( // 讓TextField佔據剩餘空間
+            child: TextField(
+              obscureText: passwordVisible, 
+              keyboardType: TextInputType.visiblePassword, 
+              textInputAction: TextInputAction.done,
+              decoration: InputDecoration(
+                border: InputBorder.none,
+                suffixIcon: IconButton( 
+                  icon: Icon(passwordVisible 
+                      ? Icons.visibility_off 
+                      : Icons.visibility), 
+                  onPressed: () {setState(() { passwordVisible = !passwordVisible; });}, 
+                ), 
+                alignLabelWithHint: false,
+              ) 
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

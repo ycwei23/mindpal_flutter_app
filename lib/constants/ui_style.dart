@@ -24,11 +24,24 @@ class MyButtonStyles {
     )
   );
 
-  static ButtonStyle MoodDiaryButtonStyle = ElevatedButton.styleFrom(
+  static ButtonStyle moodDiaryButtonStyle = ElevatedButton.styleFrom(
     backgroundColor: UIColors.lightGreen,
     foregroundColor: UIColors.white,
     splashFactory: NoSplash.splashFactory, // 完全取消水波紋效果
-    fixedSize: const Size(125, 50),
+    fixedSize: const Size(110, 45),
+    elevation: 0,
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+    textStyle: const TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.bold
+    )
+  );
+
+  static ButtonStyle newConsultButtonStyle = ElevatedButton.styleFrom(
+    backgroundColor: UIColors.lightGreen,
+    foregroundColor: UIColors.white,
+    splashFactory: NoSplash.splashFactory, // 完全取消水波紋效果
+    fixedSize: const Size(150, 45),
     elevation: 0,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
     textStyle: const TextStyle(
@@ -38,6 +51,7 @@ class MyButtonStyles {
   );
 
   static ButtonStyle dialogCencelButtonStyle = ElevatedButton.styleFrom(
+    
       backgroundColor: UIColors.grey3,
       foregroundColor: UIColors.white,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -74,6 +88,30 @@ class MyButtonStyles {
         fontWeight: FontWeight.bold
       ),      
   );
+
+  static ButtonStyle editProfileButtonStyle = ElevatedButton.styleFrom(
+      backgroundColor: UIColors.lightGreen,
+      foregroundColor: UIColors.white,
+      splashFactory: NoSplash.splashFactory, // 完全取消水波紋效果
+      fixedSize: const Size(343, 51),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      textStyle: const TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.bold
+      ),      
+  );  
+
+  static ButtonStyle addTodayMoodDiaryButtonStyle = ElevatedButton.styleFrom(
+      backgroundColor: UIColors.lightGreen,
+      foregroundColor: UIColors.white,
+      splashFactory: NoSplash.splashFactory, // 完全取消水波紋效果
+      fixedSize: const Size(343, 51),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      textStyle: const TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.bold
+      ),      
+  );  
 
   static ButtonStyle profileButtonStyle = ElevatedButton.styleFrom(
       backgroundColor: UIColors.apricot1,

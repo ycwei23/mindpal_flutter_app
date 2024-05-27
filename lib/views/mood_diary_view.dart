@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mindpal_flutter_app/constants/ui_style.dart';
 import 'package:mindpal_flutter_app/widgets/buttons/mood_diary_buttons.dart';
 import 'package:mindpal_flutter_app/widgets/cards/today_event_card.dart';
 import 'package:mindpal_flutter_app/widgets/cards/today_mood_card.dart';
@@ -15,6 +16,7 @@ class _MoodDiaryViewState extends State<MoodDiaryView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text("MindPal", style: MyTextStyles.appBarTextStyle,),),
       body: ListView(
         children: const [
           SizedBox(height: 14),
@@ -38,7 +40,7 @@ class _MoodDiaryViewState extends State<MoodDiaryView> {
             child: TodayMoodDiaryCard(),
           ),          SizedBox(height: 12,),    
           Padding(
-            padding: EdgeInsets.only(left: 14, right: 14),
+            padding: EdgeInsets.only(left: 18, right: 18),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [

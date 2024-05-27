@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mindpal_flutter_app/constants/routes.dart';
 import 'package:mindpal_flutter_app/constants/ui_colors.dart';
 import 'package:mindpal_flutter_app/constants/ui_style.dart';
 import 'package:mindpal_flutter_app/widgets/dialogs/user_info_dialog.dart';
@@ -49,7 +50,7 @@ class _UserInfoCardState extends State<UserInfoCard> {
               children: [
                 TextButton(
                   onPressed: () => {
-                    showDialog(context: context, builder: (context) => const UserInfoDialog())
+                    Navigator.pushNamed(context, Routes.editProfile)
                   }, 
                   child: Text("修改個人資訊", style: MyTextStyles.cardTextButtonTextStyle,)
                 )

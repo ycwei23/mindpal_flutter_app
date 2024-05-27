@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mindpal_flutter_app/constants/routes.dart';
 import 'package:mindpal_flutter_app/constants/ui_colors.dart';
 import 'package:mindpal_flutter_app/constants/ui_style.dart';
 
@@ -23,7 +24,7 @@ class _MoodStatusCardState extends State<MoodStatusCard> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("心理狀態光譜", style: MyTextStyles.cardTitleTextStyle,),
-                TextButton(onPressed: () => {}, child: Text("查看更多", style: MyTextStyles.cardTextButtonTextStyle,))
+                TextButton(onPressed: () => {Navigator.pushNamed(context, Routes.weeklyMoodStatus)}, child: Text("查看更多", style: MyTextStyles.cardTextButtonTextStyle,))
               ],
             ),
             const ProgressIndicatorWidget(progress: 0.5)
